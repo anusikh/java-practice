@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "9d6e36f8-500e-4f66-9ea2-e8acc1e6bfe4",
+		"name": "collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11510718"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"anusikh123\",\r\n    \"password\": \"Malaya143!\",\r\n    \"email\": \"anusikh2002@gmail.com\",\r\n    \"roles\": \"ROLE_USER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anusikh123\",\r\n    \"password\": \"Malaya143!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/oauth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idToken\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk5YmNiMDY5MzQwYTNmMTQ3NDYyNzk0ZGZlZmE3NWU3OTk2MTM2MzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2ODc4MDAwMzcsImF1ZCI6IjU4NTQ2NzQyNjQ1NS02djVuOHVxNzNkNDdxbGFldWRqcGphNWE5OHJpMWtqMy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMzUwMjYxNDI5OTg1NDI2NjQyNSIsImVtYWlsIjoiYW51c2lraDIwMDFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF6cCI6IjU4NTQ2NzQyNjQ1NS02djVuOHVxNzNkNDdxbGFldWRqcGphNWE5OHJpMWtqMy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsIm5hbWUiOiJBbnVzaWtoIFBhbmRhIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBY0hUdGN1UF9QV3hoV1VHRktkR0U5ajEyTFRHUTBPZElRbmg3VGpDeE5qX3U4PXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFudXNpa2giLCJmYW1pbHlfbmFtZSI6IlBhbmRhIiwiaWF0IjoxNjg3ODAwMzM3LCJleHAiOjE2ODc4MDM5MzcsImp0aSI6ImRjZDUwN2M5MWJhMTk2YTZiZDExZDEyODliZWQ3OWFkOGQ4NjE4NTgifQ.UVx1YED1Qz9_VGRmpyCOfS0Y4WySvjDSWnB3YtvS6h073Aj1DFUXfnrC1MSACZEe41szRtnVn-JzXIo6aXyrIsb5GMN4iDsMRERxDGYJeAZ_PGgHY2fpgWeCNvww_rpnzdmqBC9COQ0d_w4wt1SKziQUqAHL-md8TQrHqkXF2YcJa3z0F6sbJ4xG_fkQzPfs_x7VV2tVlp4gMSsYPQQc0nsckEfYu_rPQOVXszplfCbwbn4Rk25ulJ05JdmO7Ug9L6us1xIYnMknJwv2GV4vXZzxwqOhJBg0LS14kxJi0q6MN1mGrk50ONGVCefGg-8FyA9sQvJ7WHQH2iRvVIzNOA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

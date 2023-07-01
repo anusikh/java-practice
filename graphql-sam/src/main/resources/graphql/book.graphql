@@ -1,0 +1,24 @@
+type Book {
+    id: ID
+    name: String
+    author: String
+    price: Float
+    ratings: [Rating]
+}
+
+type Rating {
+    id: ID
+    rating: Int
+    comment: String
+    user: Float
+    # user should be long but for simplicity i've done this
+}
+
+type Query {
+    getBooks: [Book]
+}
+
+type Mutation {
+    createBook(name: String!, author: String!, publisher: String!, price: Float!): Book!
+    createRating(bookId: Int, rating: Int, comment: String, user: Float): Rating!
+}
