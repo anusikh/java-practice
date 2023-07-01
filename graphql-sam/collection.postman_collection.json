@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/new",
+					"raw": "http://localhost:8080/auth/new",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -35,7 +35,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/authenticate",
+			"name": "http://localhost:8080/auth/authenticate",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -49,7 +49,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/authenticate",
+					"raw": "http://localhost:8080/auth/authenticate",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -63,12 +63,12 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/welcome",
+			"name": "http://localhost:8080/auth/welcome",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/welcome",
+					"raw": "http://localhost:8080/auth/welcome",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -82,7 +82,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/oauth",
+			"name": "http://localhost:8080/auth/oauth",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -96,7 +96,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/oauth",
+					"raw": "http://localhost:8080/auth/oauth",
 					"protocol": "http",
 					"host": [
 						"localhost"
