@@ -21,12 +21,19 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
+// LOGIC:
+// We have 2 security configs, the lower order one (@Order(1)) is initialized first
+// and then the other one
+// The lowerorder one enables all graphql api's by default, if we want protection for these graphql
+// routes, add @PreAuthorize in the controller above the route
+// Since we want to protect /auth/welcome, added it to the GraphQlSecurityConfig too
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    @Order(1)
+    @Order(2)
     @Configuration
     public class JwtSecurityConfig {
         @Autowired
@@ -72,6 +79,8 @@ public class SecurityConfig {
         }
     }
 
+    // this is the config for graphql, we are allowing all requests to pass through
+    // filter
     @Order(1)
     @Configuration
     public class GraphqlSecurityConfig {
@@ -83,6 +92,7 @@ public class SecurityConfig {
             return httpSecurity
                     .cors(x -> x.disable())
                     .csrf(x -> x.disable())
+                    .authorizeHttpRequests(x -> x.requestMatchers("/auth/welcome").authenticated())
                     .authorizeHttpRequests(x -> x.anyRequest().permitAll())
                     .sessionManagement(x -> x.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                     .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)

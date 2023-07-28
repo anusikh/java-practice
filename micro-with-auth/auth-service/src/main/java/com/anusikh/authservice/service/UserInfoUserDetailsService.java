@@ -1,6 +1,6 @@
 package com.anusikh.authservice.service;
 
-import com.anusikh.authservice.dto.IdTokenRequest;
+import com.anusikh.authservice.dao.IdTokenRequest;
 import com.anusikh.authservice.entity.UserInfo;
 import com.anusikh.authservice.entity.UserInfoUserDetails;
 import com.anusikh.authservice.repository.UserInfoRepository;
@@ -10,9 +10,9 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
-
 import jakarta.transaction.Transactional;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -28,12 +28,15 @@ import java.util.Optional;
 @Service
 public class UserInfoUserDetailsService implements UserDetailsService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserInfoUserDetailsService.class);
+
+    @Autowired
+    private JwtUtil jwtUtil;
     @Autowired
     private UserInfoRepository userInfoRepository;
     @Value("${app.googleClientId}")
     private String clientId;
-    @Autowired
-    private JwtUtil jwtUtil;
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -41,31 +44,26 @@ public class UserInfoUserDetailsService implements UserDetailsService {
         try {
             userInfo = userInfoRepository.findByName(username);
         } catch (Exception e) {
-            System.out.println("exception");
+            LOGGER.info("UserInfoUserDetailsService::loadUserByUsername::", e);
         }
         return new UserInfoUserDetails(userInfo.get());
     }
 
-    public String loginOauthGoogle(IdTokenRequest tokenRequest) {
+    public String loginOauthGoogle(IdTokenRequest idTokenRequest) {
         try {
-            UserInfo user = verifyIdToken(tokenRequest.getIdToken());
-            return jwtUtil.generateToken(user.getName());
+            UserInfo user = verifyIdToken(idTokenRequest.getIdToken());
+            return jwtUtil.generateToken("");
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.info("UserInfoUserDetailsService::loginOauthGoogle::", e);
             return null;
         }
     }
 
-    // NOTE:
-    // https://developers.google.com/identity/gsi/web/guides/verify-google-id-token
     @Transactional
     private UserInfo verifyIdToken(String idToken) {
         try {
-            GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(),
-                    new GsonFactory())
-                    .setAudience(Collections.singletonList(clientId)).build();
-
-            GoogleIdToken googleIdToken = verifier.verify(idToken);
+            GoogleIdTokenVerifier googleIdTokenVerifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), new GsonFactory()).setAudience(Collections.singletonList(clientId)).build();
+            GoogleIdToken googleIdToken = googleIdTokenVerifier.verify(idToken);
             if (idToken == null) {
                 return null;
             }
@@ -74,7 +72,6 @@ public class UserInfoUserDetailsService implements UserDetailsService {
             String name = (String) payload.get("name");
             String email = (String) payload.get("email");
 
-            // Check if the user is there, else create a new user
             Optional<UserInfo> existingUser = userInfoRepository.findByEmail(email);
             if (existingUser.isPresent() == true) {
                 return existingUser.get();
@@ -85,8 +82,9 @@ public class UserInfoUserDetailsService implements UserDetailsService {
             }
 
         } catch (Exception e) {
-            System.out.println(e);
+            LOGGER.info("UserInfoUserDetailsService::verifyIdToken::", e);
             return null;
         }
     }
+
 }
