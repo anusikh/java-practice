@@ -3,9 +3,9 @@ package com.anusikh.authservice.controller;
 import com.anusikh.authservice.dao.AuthRequest;
 import com.anusikh.authservice.dao.IdTokenRequest;
 import com.anusikh.authservice.entity.UserInfo;
-import com.anusikh.authservice.repository.UserInfoRepository;
 import com.anusikh.authservice.service.UserInfoUserDetailsService;
 import com.anusikh.authservice.util.JwtUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -27,8 +27,6 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
     @Autowired
-    private UserInfoRepository userInfoRepository;
-    @Autowired
     private UserInfoUserDetailsService userInfoUserDetailsService;
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -44,8 +42,7 @@ public class AuthController {
     @PostMapping("/new")
     public String addNewUser(@RequestBody UserInfo userInfo) {
         userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
-        userInfoRepository.save(userInfo);
-        return "done";
+        return userInfoUserDetailsService.register(userInfo);
     }
 
     @PostMapping("/auth")

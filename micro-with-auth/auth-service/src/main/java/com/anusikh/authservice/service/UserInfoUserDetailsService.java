@@ -37,6 +37,20 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     @Value("${app.googleClientId}")
     private String clientId;
 
+    public String register(UserInfo userInfo) {
+        try {
+            Optional<UserInfo> u = userInfoRepository.findByName(userInfo.getName());
+            if (u.get() == null) {
+                userInfoRepository.save(userInfo);
+                return "new user created";
+            } else {
+                return "user already exists";
+            }
+        } catch (Exception e) {
+            LOGGER.info("UserInfoUserDetailsService::loadUserByUsername::", e);
+            return "something went wrong";
+        }
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -62,7 +76,8 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     @Transactional
     private UserInfo verifyIdToken(String idToken) {
         try {
-            GoogleIdTokenVerifier googleIdTokenVerifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), new GsonFactory()).setAudience(Collections.singletonList(clientId)).build();
+            GoogleIdTokenVerifier googleIdTokenVerifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(),
+                    new GsonFactory()).setAudience(Collections.singletonList(clientId)).build();
             GoogleIdToken googleIdToken = googleIdTokenVerifier.verify(idToken);
             if (idToken == null) {
                 return null;
