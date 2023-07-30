@@ -40,7 +40,7 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     public String register(UserInfo userInfo) {
         try {
             Optional<UserInfo> u = userInfoRepository.findByName(userInfo.getName());
-            if (u.get() == null) {
+            if (!u.isPresent()) {
                 userInfoRepository.save(userInfo);
                 return "new user created";
             } else {
