@@ -6,6 +6,7 @@ import com.anusikh.authservice.entity.UserInfo;
 import com.anusikh.authservice.service.UserInfoUserDetailsService;
 import com.anusikh.authservice.util.JwtUtil;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -33,9 +34,13 @@ public class AuthController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired 
+    private RabbitTemplate rabbitTemplate;
+
     @GetMapping("/welcome")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
     public String welcome(@RequestHeader(value = "sample", required = false) String sample) {
+        rabbitTemplate.convertAndSend("sample_exchange", "key.anusikh", "hello");
         return sample;
     }
 

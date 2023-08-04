@@ -14,3 +14,14 @@ services:
       MYSQL_ROOT_PASSWORD: "root"
     volumes:
       - ./db:/var/lib/mysql
+  rabbitmq3:
+    container_name: "rabbitmq"
+    image: rabbitmq:3.8-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=anusikh2001
+      - RABBITMQ_DEFAULT_PASS=Malaya143!
+    ports:
+      # AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
