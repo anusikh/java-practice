@@ -25,6 +25,7 @@ public class RabbitMqConfig {
         return new TopicExchange(EXCHANGE);
     }
 
+    // bincding a routing_key to exchange
     @Bean
     public Binding binding(Queue queue, TopicExchange exchange) {
         return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
