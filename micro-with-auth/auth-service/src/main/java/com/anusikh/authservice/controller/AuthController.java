@@ -62,6 +62,7 @@ public class AuthController {
         }
     }
 
+    // using React component, get the idToken and sent call this api
     @PostMapping("/oauth")
     public String oauthAndGetToken(@RequestBody IdTokenRequest idTokenRequest) {
         return userInfoUserDetailsService.loginOauthGoogle(idTokenRequest);
