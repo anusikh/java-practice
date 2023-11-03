@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "0ffe1803-511f-4545-8d92-7afb756b255b",
+		"name": "sb-file-upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11510718"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/file/upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/anusi/OneDrive/Documents/ShareX/Screenshots/2023-10/firefox_gtiuWZvYcl.png",
+								"/C:/Users/anusi/OneDrive/Documents/ShareX/Screenshots/2023-10/firefox_VXjDhO00uY.png"
+							]
+						},
+						{
+							"key": "name",
+							"value": "anusikh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/file/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/file/download/12522203112023_0BDTehz6Oj.png",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/file/download/12522203112023_0BDTehz6Oj.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"download",
+						"12522203112023_0BDTehz6Oj.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/file",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
