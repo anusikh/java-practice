@@ -1,0 +1,49 @@
+version: "3.8"
+services:
+
+  API:
+    image: 'acidjobs'
+    build: ./acidjobs
+    ports:
+      - "8080"
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: mysqldb
+      MYSQL_PORT: 3306
+    depends_on:
+      - "mysqldb"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - API
+      - mysqldb
+    ports:
+      - "4000:4000"
+
+  # FROM node:alpine
+  # RUN npm install peer -g
+  # EXPOSE 3001
+  # CMD ["peerjs", "--port", "3001"]
+
+  # Make sure u build the above Dockerfile contents to create the peerjs image
+
+  peerjs:
+    image: peerjs
+    ports:
+      - "3001:3001"
+
+  mysqldb: 
+    container_name: mysqldb
+    image: mysql:5.7
+    ports: 
+      - "3306:3306"
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./init.sql:/data/application/init.sql
+    environment:
+      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: root
