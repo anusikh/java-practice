@@ -1,1 +1,1 @@
-### spring-boot-3-practice
+### java-practice
