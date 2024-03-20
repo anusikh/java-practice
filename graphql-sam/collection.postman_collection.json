@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "9d6e36f8-500e-4f66-9ea2-e8acc1e6bfe4",
-		"name": "collection",
+		"_postman_id": "cd797fac-eace-47e0-a8a8-42f3efe9ebc1",
+		"name": "sample",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11510718"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/new",
+			"name": "http://localhost:8080/auth/new",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -28,6 +28,7 @@
 					],
 					"port": "8080",
 					"path": [
+						"auth",
 						"new"
 					]
 				}
@@ -56,6 +57,7 @@
 					],
 					"port": "8080",
 					"path": [
+						"auth",
 						"authenticate"
 					]
 				}
@@ -66,7 +68,13 @@
 			"name": "http://localhost:8080/auth/welcome",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVzaWtoMTIzIiwiaWF0IjoxNzEwODU5MDMyLCJleHAiOjE3MTA4NjA4MzJ9.eBScuJIef6OPSz_is0w9e5ZfP7vv_wNu8veUy6yQaf4",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "http://localhost:8080/auth/welcome",
 					"protocol": "http",
@@ -75,6 +83,7 @@
 					],
 					"port": "8080",
 					"path": [
+						"auth",
 						"welcome"
 					]
 				}
@@ -96,7 +105,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/auth/oauth",
+					"raw": "http://localhost:8080/oauth",
 					"protocol": "http",
 					"host": [
 						"localhost"
