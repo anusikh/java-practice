@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config-map
+data:
+  mysql-server: demo-app-mysql      # The name of mysql service (same as mentioned in mysql-deployment.yaml)
+  mysql-database-name: jwt-auth    # The name of the database used by the demo app
+  mysql-user-username: root     
