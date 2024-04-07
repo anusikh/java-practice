@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "1a5c855f-545e-4d4c-8080-1b602bbe7f67",
+		"name": "rbac-keycloak-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11510718"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/realms/micro-service/protocol/openid-connect/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "micro-service",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "anusikh",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Malaya143!",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "QMidrtIjFZ50MzmPwtPJH9qqBHoNMVyl",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/micro-service/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"micro-service",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://sample-service:8082/admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVN0FELTQzTkVXZ0xqUTVkWnNfVUNoVFd0RVRJaVdDdE9RVEVZbzZJdEx3In0.eyJleHAiOjE3MTI1MzEyNDksImlhdCI6MTcxMjUzMDk0OSwianRpIjoiOTk2YWViZTUtMTQ2ZS00N2UzLWI1ZjAtMjAwOWM2ODZlOGFiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImRiMGZmNDNiLTg3MWUtNDcyNS1hODBmLTUzNWI0ODkxNzlkNyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbImFkbWluIiwidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJhbnVzaWtoIHBhbmRhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYW51c2lraCIsImdpdmVuX25hbWUiOiJhbnVzaWtoIiwiZmFtaWx5X25hbWUiOiJwYW5kYSIsImVtYWlsIjoiYW51c2lraDIwMDFAZ21haWwuY29tIn0.IUo5nZGfJ_69NFzODcnwkX8u_KkPB-8Me4Cdog4eFG6wioexxyN7f0Hk-oRH52la73hUB14B2NZtWKl09s5tq0IZYM_pJ9svCulWPkKqzmVsVLb3KWmiW5cgRfJrIItb3lhaK94YurZ5gE4sHCYgk_trO-82U_dlfz5JanHR6pvWtStNFnYZt7om34BV4Q7L5oeLiK_3N7-I4OM_oBYHX_AFyksflxwz2l1SepcXEavmh5heeOsqJZ6QmWwCPqwpIuWm8Bw5zazpONrckxBPbpPRLMigXq2zCwWKbgtE_zMwsBSvbAP-SJa1SLQLLc5f-vX3bUqFEW3yz635gJoWLg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sample-service:8082/admin",
+					"protocol": "http",
+					"host": [
+						"sample-service"
+					],
+					"port": "8082",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://sample-service:8082/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVN0FELTQzTkVXZ0xqUTVkWnNfVUNoVFd0RVRJaVdDdE9RVEVZbzZJdEx3In0.eyJleHAiOjE3MTI1MzEyNDksImlhdCI6MTcxMjUzMDk0OSwianRpIjoiOTk2YWViZTUtMTQ2ZS00N2UzLWI1ZjAtMjAwOWM2ODZlOGFiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImRiMGZmNDNiLTg3MWUtNDcyNS1hODBmLTUzNWI0ODkxNzlkNyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbImFkbWluIiwidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJhbnVzaWtoIHBhbmRhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYW51c2lraCIsImdpdmVuX25hbWUiOiJhbnVzaWtoIiwiZmFtaWx5X25hbWUiOiJwYW5kYSIsImVtYWlsIjoiYW51c2lraDIwMDFAZ21haWwuY29tIn0.IUo5nZGfJ_69NFzODcnwkX8u_KkPB-8Me4Cdog4eFG6wioexxyN7f0Hk-oRH52la73hUB14B2NZtWKl09s5tq0IZYM_pJ9svCulWPkKqzmVsVLb3KWmiW5cgRfJrIItb3lhaK94YurZ5gE4sHCYgk_trO-82U_dlfz5JanHR6pvWtStNFnYZt7om34BV4Q7L5oeLiK_3N7-I4OM_oBYHX_AFyksflxwz2l1SepcXEavmh5heeOsqJZ6QmWwCPqwpIuWm8Bw5zazpONrckxBPbpPRLMigXq2zCwWKbgtE_zMwsBSvbAP-SJa1SLQLLc5f-vX3bUqFEW3yz635gJoWLg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sample-service:8082/user",
+					"protocol": "http",
+					"host": [
+						"sample-service"
+					],
+					"port": "8082",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry-server:8761/eureka/
+
+spring:
+  application:
+    name: sample-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # NOTE: for some reason using keycloak-auth:8080 instead of localhost doesn't work
+          issuer-uri: http://localhost:8080/realms/micro-service
+
+jwt:
+    auth:
+      converter:
+        resource-id: micro-service
+        principal-attribute: preferred_username
