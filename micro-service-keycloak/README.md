@@ -57,3 +57,6 @@
 ### TODO:
 - figure out how to persist the keycloak realm
 - nextjs frontend
+    - refer PKCE flow diagram
+    - store the user details in some sort of global state
+    - then use it to call the api
