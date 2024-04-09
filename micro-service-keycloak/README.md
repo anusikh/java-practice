@@ -4,9 +4,9 @@
 
 ------------
 
-- added config server
-- added `127.0.0.1  config-server` in hosts file
-- running on port `8088`
+- added gateway client
+- added `127.0.0.1  gateway-client` in hosts file
+- running on port `8083`
 
 ------------
 
@@ -25,8 +25,14 @@
 - go to `realm settings` and in Login section, select `User Registration` to enable user registration
 - in the user registration tab, select the default role as `user`
 - this makes sure that every new user registered is assigned the `user` role automatically
-- navigate to this link and register: http://localhost:8080/realms/micro-service/protocol/openid-connect/auth?response_type=code&client_id=micro-service&scope=openid&redirect_uri=http://localhost:3000/login-callback
+
+- since we have enabled PKCE, we need a code_verifier and a code_challenge
+- code_verifier can be any random string like `anusikh`
+- code_challenge needs to be the SHA256 hash of that string
+
+- navigate to this link and register: http://localhost:8080/realms/micro-service/protocol/openid-connect/auth?response_type=code&client_id=micro-service&scope=openid&redirect_uri=http://localhost:3000/logincb&code_challenge_method=S256&code_challenge=<code_verifier>
 - i registered my personal account and to assign it admin role, i went to `Users` > my user > role mapping tab > assign role button and then i assigned the admin role
+- get the client secret from the client settings
 
 ------------
 
@@ -49,6 +55,6 @@
 
 
 ### TODO:
-- why config server not working, check
+- add gateway
 - figure out how to persist the keycloak realm
 - nextjs frontend
