@@ -55,6 +55,5 @@
 
 
 ### TODO:
-- add gateway
 - figure out how to persist the keycloak realm
 - nextjs frontend

@@ -21,7 +21,7 @@
 						},
 						{
 							"key": "username",
-							"value": "anusikh",
+							"value": "user1",
 							"type": "text"
 						},
 						{
@@ -36,7 +36,7 @@
 						},
 						{
 							"key": "client_secret",
-							"value": "QMidrtIjFZ50MzmPwtPJH9qqBHoNMVyl",
+							"value": "xbGNkLVL1xWNxeuzUj2pPCOCZk5IBZin",
 							"type": "text"
 						}
 					]
@@ -60,14 +60,14 @@
 			"response": []
 		},
 		{
-			"name": "http://sample-service:8082/admin",
+			"name": "http://gateway-client:8083/sample/admin",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVN0FELTQzTkVXZ0xqUTVkWnNfVUNoVFd0RVRJaVdDdE9RVEVZbzZJdEx3In0.eyJleHAiOjE3MTI1MzEyNDksImlhdCI6MTcxMjUzMDk0OSwianRpIjoiOTk2YWViZTUtMTQ2ZS00N2UzLWI1ZjAtMjAwOWM2ODZlOGFiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImRiMGZmNDNiLTg3MWUtNDcyNS1hODBmLTUzNWI0ODkxNzlkNyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbImFkbWluIiwidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJhbnVzaWtoIHBhbmRhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYW51c2lraCIsImdpdmVuX25hbWUiOiJhbnVzaWtoIiwiZmFtaWx5X25hbWUiOiJwYW5kYSIsImVtYWlsIjoiYW51c2lraDIwMDFAZ21haWwuY29tIn0.IUo5nZGfJ_69NFzODcnwkX8u_KkPB-8Me4Cdog4eFG6wioexxyN7f0Hk-oRH52la73hUB14B2NZtWKl09s5tq0IZYM_pJ9svCulWPkKqzmVsVLb3KWmiW5cgRfJrIItb3lhaK94YurZ5gE4sHCYgk_trO-82U_dlfz5JanHR6pvWtStNFnYZt7om34BV4Q7L5oeLiK_3N7-I4OM_oBYHX_AFyksflxwz2l1SepcXEavmh5heeOsqJZ6QmWwCPqwpIuWm8Bw5zazpONrckxBPbpPRLMigXq2zCwWKbgtE_zMwsBSvbAP-SJa1SLQLLc5f-vX3bUqFEW3yz635gJoWLg",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuUk9IVG13MGtzZVZ6UWNfNDd0cGRMWlV1Q3duTm11ZnFCamNLZlBWWDkwIn0.eyJleHAiOjE3MTI2NjkxMDQsImlhdCI6MTcxMjY2ODgwNCwianRpIjoiNjJlNjUzODAtODA5MS00MGI5LWExMWItODIyZjBmZDFmMDJiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjkyOTM1YTMzLWQzZTEtNGEyZC04NmVjLTUxYTE3ZDgyN2M0MCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiMGViMTNjYWYtOTc4OC00NGQyLWE4MjgtZjIwNmMyOWJiNWEwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbInVzZXIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjBlYjEzY2FmLTk3ODgtNDRkMi1hODI4LWYyMDZjMjliYjVhMCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMSIsImdpdmVuX25hbWUiOiJ1c2VyMSIsImZhbWlseV9uYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSJ9.2L2v1niU3UrrzoRpXpRyCtZvXh8OKC-kHUVVLMTm0B7_uphTf2XKAyt0Gv5iZI4GGeSHNWmphzON36SYlaiV-mqQJJbO5VkqCGOkA6YN1fjx5ACd6JyvRIKgC_XUY-oFf1X94o61n8uJF5jv74Z9Mkb1ehnnSS5IWcKNbzAFeIiD3JiINe9vzPsPS8vWaI_jSyYA7PZLBd2ZaI9d0pqVVLLqTI0Nflsx7q1LW5jyOUvehRfF64ceztres2kwRGrtQMgqo8WPzawaVJQPCFqFiLziUY44kJhcdx8h9Et1n1onknpDpenl-Ab136Z9fUEtnM2_X7KbbgOZiL6ufAg8mw",
 							"type": "string"
 						}
 					]
@@ -75,13 +75,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sample-service:8082/admin",
+					"raw": "http://gateway-client:8083/sample/admin",
 					"protocol": "http",
 					"host": [
-						"sample-service"
+						"gateway-client"
 					],
-					"port": "8082",
+					"port": "8083",
 					"path": [
+						"sample",
 						"admin"
 					]
 				}
@@ -89,14 +90,14 @@
 			"response": []
 		},
 		{
-			"name": "http://sample-service:8082/user",
+			"name": "http://gateway-client:8083/sample/user",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJVN0FELTQzTkVXZ0xqUTVkWnNfVUNoVFd0RVRJaVdDdE9RVEVZbzZJdEx3In0.eyJleHAiOjE3MTI1MzEyNDksImlhdCI6MTcxMjUzMDk0OSwianRpIjoiOTk2YWViZTUtMTQ2ZS00N2UzLWI1ZjAtMjAwOWM2ODZlOGFiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImRiMGZmNDNiLTg3MWUtNDcyNS1hODBmLTUzNWI0ODkxNzlkNyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbImFkbWluIiwidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiYzQyYzdkOTYtYjU0Ni00ZWNmLTg0MjYtMDk2N2U1MTIxNDg5IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJhbnVzaWtoIHBhbmRhIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiYW51c2lraCIsImdpdmVuX25hbWUiOiJhbnVzaWtoIiwiZmFtaWx5X25hbWUiOiJwYW5kYSIsImVtYWlsIjoiYW51c2lraDIwMDFAZ21haWwuY29tIn0.IUo5nZGfJ_69NFzODcnwkX8u_KkPB-8Me4Cdog4eFG6wioexxyN7f0Hk-oRH52la73hUB14B2NZtWKl09s5tq0IZYM_pJ9svCulWPkKqzmVsVLb3KWmiW5cgRfJrIItb3lhaK94YurZ5gE4sHCYgk_trO-82U_dlfz5JanHR6pvWtStNFnYZt7om34BV4Q7L5oeLiK_3N7-I4OM_oBYHX_AFyksflxwz2l1SepcXEavmh5heeOsqJZ6QmWwCPqwpIuWm8Bw5zazpONrckxBPbpPRLMigXq2zCwWKbgtE_zMwsBSvbAP-SJa1SLQLLc5f-vX3bUqFEW3yz635gJoWLg",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuUk9IVG13MGtzZVZ6UWNfNDd0cGRMWlV1Q3duTm11ZnFCamNLZlBWWDkwIn0.eyJleHAiOjE3MTI2NjkxMDQsImlhdCI6MTcxMjY2ODgwNCwianRpIjoiNjJlNjUzODAtODA5MS00MGI5LWExMWItODIyZjBmZDFmMDJiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjkyOTM1YTMzLWQzZTEtNGEyZC04NmVjLTUxYTE3ZDgyN2M0MCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiMGViMTNjYWYtOTc4OC00NGQyLWE4MjgtZjIwNmMyOWJiNWEwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbInVzZXIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjBlYjEzY2FmLTk3ODgtNDRkMi1hODI4LWYyMDZjMjliYjVhMCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMSIsImdpdmVuX25hbWUiOiJ1c2VyMSIsImZhbWlseV9uYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSJ9.2L2v1niU3UrrzoRpXpRyCtZvXh8OKC-kHUVVLMTm0B7_uphTf2XKAyt0Gv5iZI4GGeSHNWmphzON36SYlaiV-mqQJJbO5VkqCGOkA6YN1fjx5ACd6JyvRIKgC_XUY-oFf1X94o61n8uJF5jv74Z9Mkb1ehnnSS5IWcKNbzAFeIiD3JiINe9vzPsPS8vWaI_jSyYA7PZLBd2ZaI9d0pqVVLLqTI0Nflsx7q1LW5jyOUvehRfF64ceztres2kwRGrtQMgqo8WPzawaVJQPCFqFiLziUY44kJhcdx8h9Et1n1onknpDpenl-Ab136Z9fUEtnM2_X7KbbgOZiL6ufAg8mw",
 							"type": "string"
 						}
 					]
@@ -104,13 +105,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://sample-service:8082/user",
+					"raw": "http://gateway-client:8083/sample/user",
 					"protocol": "http",
 					"host": [
-						"sample-service"
+						"gateway-client"
 					],
-					"port": "8082",
+					"port": "8083",
 					"path": [
+						"sample",
 						"user"
 					]
 				}

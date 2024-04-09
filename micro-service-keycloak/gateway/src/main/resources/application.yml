@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  application.name: gateway-client
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+      routes:
+        - id: sample
+          uri: http://sample-service:8082
+          predicates:
+            Path=/sample/**

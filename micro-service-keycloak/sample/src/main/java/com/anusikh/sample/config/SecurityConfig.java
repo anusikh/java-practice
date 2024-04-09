@@ -21,8 +21,8 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.authorizeHttpRequests(x -> x.requestMatchers("/user").hasRole(USER))
-                .authorizeHttpRequests(x -> x.requestMatchers("/admin").hasRole(ADMIN))
+        return http.authorizeHttpRequests(x -> x.requestMatchers("/sample/user").hasRole(USER))
+                .authorizeHttpRequests(x -> x.requestMatchers("/sample/admin").hasRole(ADMIN))
                 .oauth2ResourceServer(x -> x.jwt(y -> y.jwtAuthenticationConverter(jwtAuthConverter)))
                 .sessionManagement(x -> x.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .cors(x -> x.disable())
