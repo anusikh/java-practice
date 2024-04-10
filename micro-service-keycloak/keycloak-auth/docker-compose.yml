@@ -3,30 +3,43 @@ version: '3'
 services:
   db:
     image: postgres:13.5
+    command: postgres -c 'max_connections=200' && postgres -c 'shared_buffers=24MB'
     environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: keycloak_db
       POSTGRES_USER: my_admin
       POSTGRES_PASSWORD: my_password
-      POSTGRES_DB: keycloak_db
+    healthcheck:
+      test: "exit 0"
     ports:
-      - 5432:5432
+      - "5432:5432"
+    networks:
+      network_sso:
+        ipv4_address: "10.0.0.3"
+
   kc:
     image: quay.io/keycloak/keycloak:23.0.3
     command: start-dev
-    ports:
-      - 8080:8080
     environment:
-      DB_VENDOR: POSTGRES
-      DB_ADDR: db
-      DB_DATABASE: keycloak_db
-      DB_USER: my_admin
-      DB_SCHEMA: public
-      DB_PASSWORD: my_password
-      KEYCLOAK_HOSTNAME: backend-keycloak-auth
-      KEYCLOAK_USER: kc_admin
-      KEYCLOAK_PASSWORD: kc_password
+      KC_DB: postgres
+      KC_DB_URL_HOST: db
+      KC_DB_URL_DATABASE: keycloak_db
+      KC_DB_PASSWORD: my_password
+      KC_DB_USERNAME: my_admin
+      KC_DB_SCHEMA: public
       KEYCLOAK_ADMIN: kc_admin
       KEYCLOAK_ADMIN_PASSWORD: kc_password
-
+    ports:
+      - "8080:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    networks:
+      network_sso:
+        ipv4_address: "10.0.0.2"
+networks:  
+  network_sso:
+    ipam:
+      driver: default
+      # default = bridge
+      config:
+        - subnet: "10.0.0.0/24"
