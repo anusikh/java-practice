@@ -4,7 +4,7 @@ const settings: UserManagerSettings = {
   authority: "http://keycloak-auth:8080/realms/micro-service/",
   client_id: "micro-service",
   redirect_uri: "http://localhost:3000/logincb",
-  client_secret: "xbGNkLVL1xWNxeuzUj2pPCOCZk5IBZin",
+  client_secret: "9dindiJ2s5IW0jfiIzB35oEuKLlu7Nlj",
   response_type: "code",
 };
 
