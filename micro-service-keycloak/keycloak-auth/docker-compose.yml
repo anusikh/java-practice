@@ -33,6 +33,8 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: kc_password
     ports:
       - "8080:8080"
+    volumes:
+      - ../register-event-listener/target/register-event-listener-1.0-SNAPSHOT.jar:/opt/keycloak/providers/register-event-listener-1.0-SNAPSHOT.jar
     depends_on:
       db:
         condition: service_healthy

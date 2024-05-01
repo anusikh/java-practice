@@ -51,8 +51,14 @@
 /opt/keycloak/bin/kc.sh export --file micro-service
 ```
 
+------------
 
-
+- adding event listeners in kc
+- create a new module called `register-event-listner`
+- add dependencies, create 2 new files `RegisterEventListener` and `RegisterEventListenerProviderFactory`
+- then add `META-INF/services/org.keycloak.events.EventListenerProviderFactory` and add `org.anusikh.RegisterEventListenerProviderFactory`
+- using docker compose volumes, add it in kc docker container
+- using the kc admin ui, add the event listener in realm settings
 
 ### TODO:
 - nextjs frontend
