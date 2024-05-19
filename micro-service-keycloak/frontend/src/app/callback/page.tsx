@@ -1,21 +1,22 @@
 "use client";
 
 import { userManager } from "@/utils/auth-manager";
-import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
+import setauth from "./actions";
+import { useRouter } from "next/navigation";
 
-export default function LoginCb() {
+export default function Callback() {
   const router = useRouter();
 
   useEffect(() => {
     userManager
       .signinRedirectCallback()
-      .then((user) => {
-        console.log(user);
-        router.push("/");
+      .then(async (u) => {
+        await setauth(u.access_token);
       })
       .catch((err) => console.log(err));
-  });
+    // window.location.reload();
+  }, [router]);
 
   return <main>Authenticating.....</main>;
 }

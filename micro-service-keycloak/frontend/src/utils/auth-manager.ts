@@ -1,11 +1,13 @@
 import { UserManager, UserManagerSettings } from "oidc-client-ts";
 
 const settings: UserManagerSettings = {
-  authority: "http://keycloak-auth:8080/realms/micro-service/",
+  // NOTE: make sure host is localhost and not keycloak-auth that we set in our host file
+  authority: "http://localhost:8080/realms/micro-service/",
   client_id: "micro-service",
-  redirect_uri: "http://localhost:3000/logincb",
-  client_secret: "9dindiJ2s5IW0jfiIzB35oEuKLlu7Nlj",
+  redirect_uri: "http://localhost:3000/callback",
+  client_secret: "Lt2gXdGGTPnJGNmAZyxenS3VAsUQc2lA",
   response_type: "code",
+  scope: "openid"
 };
 
 export const userManager = new UserManager(settings);

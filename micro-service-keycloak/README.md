@@ -30,7 +30,8 @@
 - code_verifier can be any random string like `anusikh`
 - code_challenge needs to be the SHA256 hash of that string
 
-- navigate to this link and register: http://localhost:8080/realms/micro-service/protocol/openid-connect/auth?response_type=code&client_id=micro-service&scope=openid&redirect_uri=http://localhost:3000/logincb&code_challenge_method=S256&code_challenge=<code_verifier>
+- navigate to this link and register: http://localhost:8080/realms/micro-service/protocol/openid-connect/auth?response_type=code&client_id=micro-service&scope=openid&redirect_uri=http://localhost:3000/logincb&code_challenge_method=S256&code_challenge=<code_challenge>
+- direct register link: https//localhost:8080/realms/micro-service/protocol/openid-connect/registrations?client_id=micro-service&response_type=code&scope=openid&redirect_uri=http://localhost:3000/callback&code_challenge_method=S256&code_challenge=<code_challenge>
 - i registered my personal account and to assign it admin role, i went to `Users` > my user > role mapping tab > assign role button and then i assigned the admin role
 - get the client secret from the client settings
 
