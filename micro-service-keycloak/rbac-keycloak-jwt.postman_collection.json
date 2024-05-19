@@ -21,7 +21,7 @@
 						},
 						{
 							"key": "username",
-							"value": "user1",
+							"value": "anusikh",
 							"type": "text"
 						},
 						{
@@ -36,7 +36,17 @@
 						},
 						{
 							"key": "client_secret",
-							"value": "xbGNkLVL1xWNxeuzUj2pPCOCZk5IBZin",
+							"value": "Lt2gXdGGTPnJGNmAZyxenS3VAsUQc2lA",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "text"
+						},
+						{
+							"key": "code_verifier",
+							"value": "acd822a728b348d791649feb16708e920c28999a7f7b41259f83991bd4ed1b7fba59bd64858f4a12a92739d3a5936e2e",
 							"type": "text"
 						}
 					]
@@ -97,7 +107,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuUk9IVG13MGtzZVZ6UWNfNDd0cGRMWlV1Q3duTm11ZnFCamNLZlBWWDkwIn0.eyJleHAiOjE3MTI2NjkxMDQsImlhdCI6MTcxMjY2ODgwNCwianRpIjoiNjJlNjUzODAtODA5MS00MGI5LWExMWItODIyZjBmZDFmMDJiIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9taWNyby1zZXJ2aWNlIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjkyOTM1YTMzLWQzZTEtNGEyZC04NmVjLTUxYTE3ZDgyN2M0MCIsInR5cCI6IkJlYXJlciIsImF6cCI6Im1pY3JvLXNlcnZpY2UiLCJzZXNzaW9uX3N0YXRlIjoiMGViMTNjYWYtOTc4OC00NGQyLWE4MjgtZjIwNmMyOWJiNWEwIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjMwMDAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1taWNyby1zZXJ2aWNlIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJtaWNyby1zZXJ2aWNlIjp7InJvbGVzIjpbInVzZXIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjBlYjEzY2FmLTk3ODgtNDRkMi1hODI4LWYyMDZjMjliYjVhMCIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoidXNlcjEgdXNlcjEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1c2VyMSIsImdpdmVuX25hbWUiOiJ1c2VyMSIsImZhbWlseV9uYW1lIjoidXNlcjEiLCJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSJ9.2L2v1niU3UrrzoRpXpRyCtZvXh8OKC-kHUVVLMTm0B7_uphTf2XKAyt0Gv5iZI4GGeSHNWmphzON36SYlaiV-mqQJJbO5VkqCGOkA6YN1fjx5ACd6JyvRIKgC_XUY-oFf1X94o61n8uJF5jv74Z9Mkb1ehnnSS5IWcKNbzAFeIiD3JiINe9vzPsPS8vWaI_jSyYA7PZLBd2ZaI9d0pqVVLLqTI0Nflsx7q1LW5jyOUvehRfF64ceztres2kwRGrtQMgqo8WPzawaVJQPCFqFiLziUY44kJhcdx8h9Et1n1onknpDpenl-Ab136Z9fUEtnM2_X7KbbgOZiL6ufAg8mw",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmaTd6eDUxVkUxZUluakt0MERfZnRsc0FudWlEcjE2X2FqLW1xVTR0SUxjIn0.eyJleHAiOjE3MTYxMzg3NjMsImlhdCI6MTcxNjEzODQ2MywiYXV0aF90aW1lIjoxNzE2MTM4NDYzLCJqdGkiOiJmOTI2MTBhOC01YzljLTQ2NGQtOGE0MS1lYjNkMjQwNjEwN2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21pY3JvLXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiOWM1NWM5YzktZTlhNC00ZjZlLThjZjQtY2ZhZThjODBmMWJkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibWljcm8tc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiIyZTc5YzBlOS1kMjRmLTQ5ZmUtYWJjMy1mNGQ1MmFlMmU3MjUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UiOnsicm9sZXMiOlsidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjJlNzljMGU5LWQyNGYtNDlmZS1hYmMzLWY0ZDUyYWUyZTcyNSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiYW51c2lraCBwYW5kYSIsInByZWZlcnJlZF91c2VybmFtZSI6ImFudXNpa2giLCJnaXZlbl9uYW1lIjoiYW51c2lraCIsImZhbWlseV9uYW1lIjoicGFuZGEiLCJlbWFpbCI6ImFudXNpa2gyMDAxQGdtYWlsLmNvbSJ9.Lj5bddM9hakpA1qOwcGimbW1IEGMeG0GaxGQziuJ_jaUvBtB15i64ZUdCuNuwoYVf2nAhPE-g6_6jj1n3ngJy0-v7UeF9-LN8XsAFqWZWBQYc5Jpv-cizIM63i7skA6mXgdiAdeQihqjtgF-yI9hWPpW7ZRo3TkdzMaEp18jTlGf9OOLFGszXDXV3qhvI59UKvZ-pkutgr0UX7KJ2c1cbvgOPzrycXa9JQQXDH8yBzMTG_jfPxOLS-l2PpVc1c0R6Osc_h5oEJ5mMsGTmFEGVzPngHNgmV_JpeQsOT6WFmBT5JhWIA0sYw6eMwJDY-qZYWrd0oSfZKNnS64aVplXww",
 							"type": "string"
 						}
 					]
@@ -114,6 +124,39 @@
 					"path": [
 						"sample",
 						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/realms/micro-service/protocol/openid-connect/userinfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJmaTd6eDUxVkUxZUluakt0MERfZnRsc0FudWlEcjE2X2FqLW1xVTR0SUxjIn0.eyJleHAiOjE3MTYxMzg3NjMsImlhdCI6MTcxNjEzODQ2MywiYXV0aF90aW1lIjoxNzE2MTM4NDYzLCJqdGkiOiJmOTI2MTBhOC01YzljLTQ2NGQtOGE0MS1lYjNkMjQwNjEwN2YiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL21pY3JvLXNlcnZpY2UiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiOWM1NWM5YzktZTlhNC00ZjZlLThjZjQtY2ZhZThjODBmMWJkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibWljcm8tc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiIyZTc5YzBlOS1kMjRmLTQ5ZmUtYWJjMy1mNGQ1MmFlMmU3MjUiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLW1pY3JvLXNlcnZpY2UiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1pY3JvLXNlcnZpY2UiOnsicm9sZXMiOlsidXNlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJvcGVuaWQgZW1haWwgcHJvZmlsZSIsInNpZCI6IjJlNzljMGU5LWQyNGYtNDlmZS1hYmMzLWY0ZDUyYWUyZTcyNSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYW1lIjoiYW51c2lraCBwYW5kYSIsInByZWZlcnJlZF91c2VybmFtZSI6ImFudXNpa2giLCJnaXZlbl9uYW1lIjoiYW51c2lraCIsImZhbWlseV9uYW1lIjoicGFuZGEiLCJlbWFpbCI6ImFudXNpa2gyMDAxQGdtYWlsLmNvbSJ9.Lj5bddM9hakpA1qOwcGimbW1IEGMeG0GaxGQziuJ_jaUvBtB15i64ZUdCuNuwoYVf2nAhPE-g6_6jj1n3ngJy0-v7UeF9-LN8XsAFqWZWBQYc5Jpv-cizIM63i7skA6mXgdiAdeQihqjtgF-yI9hWPpW7ZRo3TkdzMaEp18jTlGf9OOLFGszXDXV3qhvI59UKvZ-pkutgr0UX7KJ2c1cbvgOPzrycXa9JQQXDH8yBzMTG_jfPxOLS-l2PpVc1c0R6Osc_h5oEJ5mMsGTmFEGVzPngHNgmV_JpeQsOT6WFmBT5JhWIA0sYw6eMwJDY-qZYWrd0oSfZKNnS64aVplXww",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/realms/micro-service/protocol/openid-connect/userinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"micro-service",
+						"protocol",
+						"openid-connect",
+						"userinfo"
 					]
 				}
 			},

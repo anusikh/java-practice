@@ -1,3 +1,8 @@
+
+![demo](./demo/demo.gif)
+
+------------
+
 - Added registry service
 - added `127.0.0.1  registry-server` in hosts file
 - run server and open `registry-server:8761` on browser
@@ -61,8 +66,4 @@
 - using docker compose volumes, add it in kc docker container
 - using the kc admin ui, add the event listener in realm settings
 
-### TODO:
-- nextjs frontend
-    - refer PKCE flow diagram
-    - store the user details in some sort of global state
-    - then use it to call the api
+------------
