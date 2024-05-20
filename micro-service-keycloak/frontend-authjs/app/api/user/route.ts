@@ -1,6 +1,5 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
-import { getToken } from "next-auth/jwt";
 import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest, res: Response) {
