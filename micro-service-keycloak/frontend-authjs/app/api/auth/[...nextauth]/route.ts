@@ -1,4 +1,4 @@
-import NextAuth, { AuthOptions, NextAuthOptions, TokenSet } from "next-auth";
+import NextAuth, { AuthOptions, TokenSet } from "next-auth";
 import { JWT } from "next-auth/jwt";
 import KeycloakProvider from "next-auth/providers/keycloak";
 
@@ -68,7 +68,7 @@ export const authOptions: AuthOptions = {
         }
       }
     },
-    async session({ session, token, user }) {
+    async session({ session, token }) {
       // Send properties to the client, like an access_token from a provider.
       return { ...session, token: token.accessToken };
     },
